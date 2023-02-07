@@ -17,16 +17,12 @@ const NewPost = () => {
 
         const title = titleValue; 
         const body = bodyRef.current.value;
-        const combineData = [ title, body ]
+        const combineData = { 
+            title,
+            body
+         }
 
-        axios.post('https://react-http-testing-eb579-default-rtdb.europe-west1.firebasedatabase.app/posts.json', {
-            body: JSON.stringify( {
-                postsData: combineData
-            } ),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+        axios.post('http://localhost:3001/create', combineData);
     }
 
     return (

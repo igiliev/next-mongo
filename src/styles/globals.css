@@ -5,3 +5,42 @@
 .list-item {
     width: 100%;
 }
+
+.header-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: burlywood;
+    margin: 0;
+    height: 60px;
+}
+
+.header-item a {
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.form-row label {
+    margin-right: 20px;
+    width: 150px;
+}
+
+.all-posts-list-item {
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.all-posts-list-item strong {
+    font-size: 18px;
+    margin-right: 10px;
+}

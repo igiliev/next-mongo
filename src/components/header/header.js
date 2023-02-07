@@ -1,15 +1,19 @@
-import { List, ListItem } from "@mui/material";
-
-const { default: Link } = require("next/link")
+import Link from "next/link";
+import { useState } from "react";
 
 const Header = () => {
+    const [ htmlEl, setHtmlEl ] = useState(null);
+    const handleNavClick = (event) => {
+        return setHtmlEl(event.currentTarget);
+    }
+
     return (
-        <nav>
-            <List>
-                <ListItem><Link href="/">Home</Link></ListItem>
-                <ListItem><Link href="/all-posts">All Posts</Link></ListItem>
-                <ListItem><Link href="/new-post">Add new post</Link></ListItem>
-            </List>
+        <nav onClick={handleNavClick}>
+            <ul className="header-list">
+                <li className="header-item"><Link href="/">Home</Link></li>
+                <li className="header-item"><Link href="/all-posts">All Posts</Link></li>
+                <li className="header-item"><Link href="/new-post">Add new post</Link></li>
+            </ul>
         </nav>
     )
 }
